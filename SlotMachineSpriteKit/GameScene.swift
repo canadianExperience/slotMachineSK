@@ -41,7 +41,7 @@ class GameScene: SKScene {
         addChild(background!)
         
         betLine = BetLine()
-        betLine?.zPosition = 2
+        betLine?.zPosition = 3
         addChild(betLine!)
         
         credits = (childNode(withName: "credits") as! SKLabelNode)

@@ -1,11 +1,12 @@
+
 import SpriteKit
 import GameplayKit
 
-class BetLine : GameObject {
+class Cherry : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "bet_line", initialScale: 2.0)
+        super.init(imageString: "cherry", initialScale: 1.0)
         Start()
     }
     
@@ -20,9 +21,9 @@ class BetLine : GameObject {
     }
     
     override func Reset() {
-        self.zPosition = 3
+        self.zPosition = 2
         self.position.y = 3652
-     
+        
     }
     
     override func CheckBounds() {
@@ -37,3 +38,4 @@ class BetLine : GameObject {
     }
     
 }
+

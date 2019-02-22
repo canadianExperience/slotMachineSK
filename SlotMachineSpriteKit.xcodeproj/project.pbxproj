@@ -35,6 +35,13 @@
 		C09A903B221F89E200030649 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9035221F89E200030649 /* cherry.png */; };
 		C09A903C221F89E200030649 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9036221F89E200030649 /* bell.png */; };
 		C09A903E221F8A4B00030649 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A903D221F8A4B00030649 /* blank.png */; };
+		C09A9040221F8C9000030649 /* Bell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A903F221F8C9000030649 /* Bell.swift */; };
+		C09A9042221F8CD900030649 /* Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9041221F8CD900030649 /* Cherry.swift */; };
+		C09A9044221F8D0900030649 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9043221F8D0900030649 /* Bar.swift */; };
+		C09A9046221F8D2900030649 /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9045221F8D2900030649 /* Blank.swift */; };
+		C09A9048221F8D4F00030649 /* Grapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9047221F8D4F00030649 /* Grapes.swift */; };
+		C09A904A221F8D7C00030649 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9049221F8D7C00030649 /* Orange.swift */; };
+		C09A904C221F8DA400030649 /* Seven.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A904B221F8DA400030649 /* Seven.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +75,13 @@
 		C09A9035221F89E200030649 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cherry.png; path = "../iOS_assignment1/MAPD724_Elena_Melnikova_Slot_Machine/images 2/cherry.png"; sourceTree = "<group>"; };
 		C09A9036221F89E200030649 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
 		C09A903D221F8A4B00030649 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
+		C09A903F221F8C9000030649 /* Bell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bell.swift; sourceTree = "<group>"; };
+		C09A9041221F8CD900030649 /* Cherry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry.swift; sourceTree = "<group>"; };
+		C09A9043221F8D0900030649 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		C09A9045221F8D2900030649 /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
+		C09A9047221F8D4F00030649 /* Grapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grapes.swift; sourceTree = "<group>"; };
+		C09A9049221F8D7C00030649 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
+		C09A904B221F8DA400030649 /* Seven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seven.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,13 @@
 				C09A9021221F6FF600030649 /* GameProtocol.swift */,
 				C09A901F221F6FE300030649 /* GameObject.swift */,
 				C09A902B221F892500030649 /* Banana.swift */,
+				C09A903F221F8C9000030649 /* Bell.swift */,
+				C09A9041221F8CD900030649 /* Cherry.swift */,
+				C09A9043221F8D0900030649 /* Bar.swift */,
+				C09A9045221F8D2900030649 /* Blank.swift */,
+				C09A9047221F8D4F00030649 /* Grapes.swift */,
+				C09A9049221F8D7C00030649 /* Orange.swift */,
+				C09A904B221F8DA400030649 /* Seven.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -230,12 +251,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C09A902C221F892500030649 /* Banana.swift in Sources */,
+				C09A904A221F8D7C00030649 /* Orange.swift in Sources */,
 				C09A9020221F6FE300030649 /* GameObject.swift in Sources */,
+				C09A9044221F8D0900030649 /* Bar.swift in Sources */,
 				C09A9022221F6FF600030649 /* GameProtocol.swift in Sources */,
+				C09A9040221F8C9000030649 /* Bell.swift in Sources */,
+				C09A9048221F8D4F00030649 /* Grapes.swift in Sources */,
+				C09A9042221F8CD900030649 /* Cherry.swift in Sources */,
+				C09A9046221F8D2900030649 /* Blank.swift in Sources */,
 				C09A9003221F6C0200030649 /* GameScene.swift in Sources */,
 				C09A9026221F7DF000030649 /* BetLine.swift in Sources */,
 				C09A9005221F6C0200030649 /* GameViewController.swift in Sources */,
 				C09A9024221F713600030649 /* Background.swift in Sources */,
+				C09A904C221F8DA400030649 /* Seven.swift in Sources */,
 				C09A8FFD221F6C0200030649 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
