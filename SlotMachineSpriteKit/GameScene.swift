@@ -13,12 +13,8 @@ var betLabel: SKLabelNode!
 var winningsLabel: SKLabelNode!
 var jackPotLabel: SKLabelNode!
 
-
-
-
 class GameScene: SKScene {
-    
-    
+  
     var sk1: SK1?
     var sk2: SK2?
     var sk3: SK3?
@@ -27,13 +23,12 @@ class GameScene: SKScene {
     var bet10: Bet10?
     var bet100: Bet100?
     var betMax: BetMax?
-    var spin1: Spin?
+    var spin: Spin?
     var reset: Reset?
     var quit: Quit?
     
     var background: Background?
     var betLine: BetLine?
-    var degToRad = 0.01745329252
     
     var playerMoney = 1000
     var winnings = 0
@@ -55,9 +50,6 @@ class GameScene: SKScene {
     var component2 = [Int]()
     var component3 = [Int]()
     var bounds: CGRect = CGRect.zero
-    
-    
-    
     
     override func didMove(to view: SKView) {
         
@@ -103,8 +95,7 @@ class GameScene: SKScene {
         sk3?.size = CGSize(width: 100, height: 100)
         sk3?.position = CGPoint(x: 150, y: 25 )
         addChild(sk3!)
-        
-        
+ 
         // add buttons to scene
         
         bet1 = Bet1()
@@ -112,7 +103,6 @@ class GameScene: SKScene {
         let bet1Texture = SKTexture(image: bet1Image!)
         bet1?.texture = bet1Texture
         bet1?.zPosition = 4
-        //bet1?.size = CGSize(width: 60, height: 60)
         bet1?.position = CGPoint(x: -screenSize.size.width + 50, y: -screenSize.size.height / 2 - 70)
         addChild(bet1!)
         
@@ -121,7 +111,6 @@ class GameScene: SKScene {
         let bet10Texture = SKTexture(image: bet10Image!)
         bet10?.texture = bet10Texture
         bet10?.zPosition = 4
-        //bet10?.size = CGSize(width: 60, height: 60)
         bet10?.position = CGPoint(x: -screenSize.size.width + 180, y: -screenSize.size.height / 2 - 70)
         addChild(bet10!)
         
@@ -130,7 +119,6 @@ class GameScene: SKScene {
         let bet100Texture = SKTexture(image: bet100Image!)
         bet100?.texture = bet100Texture
         bet100?.zPosition = 4
-        //bet100?.size = CGSize(width: 60, height: 60)
         bet100?.position = CGPoint(x: -screenSize.size.width + 310, y: -screenSize.size.height / 2 - 70)
         addChild(bet100!)
         
@@ -139,18 +127,17 @@ class GameScene: SKScene {
         let betMaxTexture = SKTexture(image: betMaxImage!)
         betMax?.texture = betMaxTexture
         betMax?.zPosition = 4
-        //betMax?.size = CGSize(width: 60, height: 60)
         betMax?.position = CGPoint(x: -screenSize.size.width + 440, y: -screenSize.size.height / 2 - 70)
         addChild(betMax!)
         
-        spin1 = Spin()
+        spin = Spin()
         let spinImage = UIImage(named: "spinButton")
         let spinTexture = SKTexture(image: spinImage!)
-        spin1?.texture = spinTexture
-        spin1?.zPosition = 4
-        spin1?.size = CGSize(width: 140, height: 120)
-        spin1?.position = CGPoint(x: -screenSize.size.width + 577, y: -screenSize.size.height / 2 - 70)
-        addChild(spin1!)
+        spin?.texture = spinTexture
+        spin?.zPosition = 4
+        spin?.size = CGSize(width: 140, height: 120)
+        spin?.position = CGPoint(x: -screenSize.size.width + 577, y: -screenSize.size.height / 2 - 70)
+        addChild(spin!)
         
         reset = Reset()
         let resetImage = UIImage(named: "resetButton")
@@ -170,12 +157,9 @@ class GameScene: SKScene {
         quit?.position = CGPoint(x: -screenSize.size.width + 577, y: screenSize.size.height / 2 + 85)
         addChild(quit!)
         
-        
-        
         //set labels
         creditsLabel = (childNode(withName: "credits") as! SKLabelNode)
         creditsLabel?.position = CGPoint(x: -screenSize.size.width + 130, y: -screenSize.size.height / 2 + 50)
-        creditsLabel?.text = "cred"
         creditsLabel?.zPosition = 2
         creditsLabel?.fontName = "Futura-Bold"
         creditsLabel?.fontColor = UIColor.white
@@ -183,7 +167,6 @@ class GameScene: SKScene {
         
         betLabel = (childNode(withName: "bet") as! SKLabelNode)
         betLabel?.position = CGPoint(x: -screenSize.size.width + 320, y: -screenSize.size.height / 2 + 50)
-        betLabel?.text = "1"
         betLabel?.zPosition = 3
         betLabel?.fontName = "Futura-Bold"
         betLabel?.fontColor = UIColor.white
@@ -191,7 +174,6 @@ class GameScene: SKScene {
         
         winningsLabel = (childNode(withName: "winnings") as! SKLabelNode)
         winningsLabel?.position = CGPoint(x: -screenSize.size.width + 510, y: -screenSize.size.height / 2 + 50)
-        winningsLabel?.text = "win"
         winningsLabel?.zPosition = 2
         winningsLabel?.fontName = "Futura-Bold"
         winningsLabel?.fontColor = UIColor.white
@@ -199,20 +181,12 @@ class GameScene: SKScene {
         
         jackPotLabel = (childNode(withName: "jackPot") as! SKLabelNode)
         jackPotLabel?.position = CGPoint(x: 0, y: screenSize.size.height / 2 + 50)
-        jackPotLabel?.text = "jackPot"
         jackPotLabel?.zPosition = 2
         jackPotLabel?.fontName = "Futura-Bold"
         jackPotLabel?.fontColor = UIColor.white
         jackPotLabel?.fontSize = 40.00
         
-        
-        
-    
-
-        
-        
         fruitArray = ["blank","grapes","banana","orange","cherry","bar","bell","seven"]
-        
         
         for i in 0..<8 {
             component1.append(i)
@@ -226,13 +200,9 @@ class GameScene: SKScene {
     
     func showPlayerStats()
     {
-        //lblBet.text = String(playerBet)
         betLabel?.text = String(playerBet)
-        //lblJackpot.text = "\(jackpot)"
         jackPotLabel?.text = "\(jackpot)"
-        //lblCredits.text = "\(playerMoney)"
         creditsLabel?.text = "\(playerMoney)"
-        //lblWins.text = "\(winNumber)"
         winningsLabel?.text = "\(winNumber)"
     }
     
@@ -264,8 +234,6 @@ class GameScene: SKScene {
         let jackPotWin = Int(arc4random_uniform(UInt32(51))) + 1
         
         if jackPotTry == jackPotWin {
-            let message = "You Won the $ \(jackpot) Jackpot!!"
-            alert1("JACKPOT", message)
             playerMoney += jackpot
             jackpot = 1000
             play(soundName: "jackPot")
@@ -275,41 +243,6 @@ class GameScene: SKScene {
         }
     }
     
-    func alert1(_ title: String, _ message: String){
-        play(soundName: "alert")
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        
-        // show the alert
-        //self.present(alert, animated: true, completion: nil)
-    }
-    // Create alert function with "YES" and "NO" buttons
-    func alert2(_ title: String, _ message: String){
-        
-        play(soundName: "alert")
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { action in
-            self.alertHandler()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "NO", style: UIAlertAction.Style.cancel, handler: nil))
-        
-        // show the alert
-        //self.present(alert, animated: true, completion: nil)
-    }
-    
-    func alertHandler(){
-        //btnSpin.isEnabled = true
-        spin1?.isHidden = false
-        resetAll();
-        showPlayerStats();
-    }
     
     // Utility function to show a win message and increase player money
     func showWinMessage() {
@@ -448,22 +381,20 @@ class GameScene: SKScene {
     }
     
     // Set bet1 label
-    //@IBAction func bet1_func(_ sender: UIButton) {
     func bet1_func() {
         play(soundName: "bet")
         playerBet = 1
-        //lblBet.text = String(playerBet)
         betLabel?.text = String(playerBet)
     }
     // Set bet10 label
-    //@IBAction func bet10_func(_ sender: UIButton) {
+    
     func bet10_func() {
         play(soundName: "bet")
         playerBet = 10
         betLabel?.text = String(playerBet)
     }
     // Set bet100 label
-    //@IBAction func bet100_func(_ sender: UIButton) {
+   
     func bet100_func() {
         play(soundName: "bet")
         playerBet = 100
@@ -471,31 +402,25 @@ class GameScene: SKScene {
         betLabel?.text = String(playerBet)
     }
     // Set betMax label
-    //@IBAction func betMax_func(_ sender: UIButton) {
     func betMax_func() {
         play(soundName: "bet")
         playerBet = playerMoney
-        //lblBet.text = String(playerBet)
         betLabel?.text = String(playerBet)
     }
     // QUIT button action
-    //@IBAction func quitGame_func(_ sender: UIButton) {
     func quitGame_func() {
         play(soundName: "quit")
         
     }
     // RES button action, reset game to initial stage
-    //@IBAction func resetGame_func(_ sender: UIButton) {
     func resetGame_func() {
         play(soundName: "res")
         resetAll()
         showPlayerStats()
-        //btnSpin.isEnabled = true
-        spin1?.isHidden = false
+        spin?.isHidden = false
     }
     
     // SPIN button action
-    //@IBAction func spin_func(_ sender: UIButton) {
     func spin_func() {
         play(soundName: "spin")
         //playerBet = Int(lblBet.text!)!
@@ -503,16 +428,9 @@ class GameScene: SKScene {
         
         if playerMoney == 0
         {
-            alert2("ATTENTION", "You ran out of Money! \nDo you want to play again?")
-            //btnSpin.isEnabled = false
-            spin1?.isHidden = true
+            spin?.isHidden = true
         }
-        else if playerBet > playerMoney {
-            alert1("ATTENTION", "You don't have enough Money to place that bet.")
-        }
-        else if playerBet <= 0 {
-            alert1("ATTENTION", "All bets must be a positive $ amount.")
-        }
+            
         else if playerBet <= playerMoney {
             spinResult = Reels();
             
@@ -525,13 +443,11 @@ class GameScene: SKScene {
             let texture1 = SKTexture(image: image1!)
             sk1?.texture = texture1
 
-            
             let image2Name = fruitArray[indexOf1]
             let image2 = UIImage(named: image2Name)
             let texture2 = SKTexture(image: image2!)
             sk2?.texture = texture2
            
-            
             let image3Name = fruitArray[indexOf2]
             let image3 = UIImage(named: image3Name)
             let texture3 = SKTexture(image: image3!)
@@ -540,12 +456,7 @@ class GameScene: SKScene {
             determineWinnings();
             showPlayerStats();
         }
-        else {
-            alert1("YOUR CREDITS", "Please enter a valid bet amount")
-        }
-
     }
-    
     
     // This function play sounds
     func play(soundName: String) {
@@ -555,34 +466,26 @@ class GameScene: SKScene {
             var customSoundId: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(customSoundUrl as CFURL, &customSoundId)
             
-            
             if soundName == "quit" {
                 AudioServicesAddSystemSoundCompletion(customSoundId, nil, nil, soundFinished, nil)
             }
             AudioServicesPlaySystemSound(customSoundId)
         }
     }
-
-
-
-
     
     func touchDown(atPoint pos : CGPoint) {
-        //plane?.position = CGPoint(x: pos.x, y: -500.0)
+        
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        // plane?.position = CGPoint(x: pos.x, y: -500.0)
+       
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        //  plane?.position = CGPoint(x: pos.x, y: -500.0)
+      
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        //for t in touches { self.touchDown(atPoint: t.location(in: self)) }
-        
         for touch in touches {
             let location = touch.location(in: self)
             
@@ -622,22 +525,20 @@ class GameScene: SKScene {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
     
-    
-    override func update(_ currentTime: TimeInterval) {
-        background?.Update()
-        betLine?.Update()
-        sk1?.Update()
-        sk2?.Update()
-        sk3?.Update()
-        bet1?.Update()
-        bet10?.Update()
-        bet100?.Update()
-        betMax?.Update()
-        spin1?.Update()
-        reset?.Update()
-        quit?.Update()
-    }
-    
+//    override func update(_ currentTime: TimeInterval) {
+//        background?.Update()
+//        betLine?.Update()
+//        sk1?.Update()
+//        sk2?.Update()
+//        sk3?.Update()
+//        bet1?.Update()
+//        bet10?.Update()
+//        bet100?.Update()
+//        betMax?.Update()
+//        spin?.Update()
+//        reset?.Update()
+//        quit?.Update()
+//    }
 }
 
 //Play sound and then exit from app

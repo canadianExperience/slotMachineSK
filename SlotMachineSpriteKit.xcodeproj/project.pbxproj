@@ -34,7 +34,6 @@
 		C09A900A221F6C0300030649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09A9009221F6C0300030649 /* Assets.xcassets */; };
 		C09A900D221F6C0300030649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09A900B221F6C0300030649 /* LaunchScreen.storyboard */; };
 		C09A9020221F6FE300030649 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A901F221F6FE300030649 /* GameObject.swift */; };
-		C09A9022221F6FF600030649 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9021221F6FF600030649 /* GameProtocol.swift */; };
 		C09A9024221F713600030649 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9023221F713600030649 /* Background.swift */; };
 		C09A9026221F7DF000030649 /* BetLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9025221F7DF000030649 /* BetLine.swift */; };
 /* End PBXBuildFile section */
@@ -69,7 +68,6 @@
 		C09A900C221F6C0300030649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C09A900E221F6C0300030649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C09A901F221F6FE300030649 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
-		C09A9021221F6FF600030649 /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		C09A9023221F713600030649 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		C09A9025221F7DF000030649 /* BetLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,10 +135,9 @@
 		C09A901E221F6E9400030649 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				C09A901F221F6FE300030649 /* GameObject.swift */,
 				C09A9025221F7DF000030649 /* BetLine.swift */,
 				C09A9023221F713600030649 /* Background.swift */,
-				C09A9021221F6FF600030649 /* GameProtocol.swift */,
-				C09A901F221F6FE300030649 /* GameObject.swift */,
 				C07877A222204D6E006AF844 /* SK1.swift */,
 				C07877A422204FDE006AF844 /* SK2.swift */,
 				C07877A622204FEA006AF844 /* SK3.swift */,
@@ -238,7 +235,6 @@
 			files = (
 				C09A9020221F6FE300030649 /* GameObject.swift in Sources */,
 				C07877A722204FEA006AF844 /* SK3.swift in Sources */,
-				C09A9022221F6FF600030649 /* GameProtocol.swift in Sources */,
 				C07877A922205206006AF844 /* Bet1.swift in Sources */,
 				C09A9003221F6C0200030649 /* GameScene.swift in Sources */,
 				C07877A322204D6E006AF844 /* SK1.swift in Sources */,

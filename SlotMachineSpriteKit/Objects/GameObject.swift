@@ -1,20 +1,16 @@
 import SpriteKit
 import GameplayKit
 
-class GameObject : SKSpriteNode, GameProtocol {
+class GameObject : SKSpriteNode
+
+{
     // common GameObject variables
     var width: CGFloat?
     var height: CGFloat?
     var halfWidth: CGFloat?
     var halfHeight: CGFloat?
     var scale: CGFloat?
-    var verticalSpeed: CGFloat?
-    var horizontalSpeed: CGFloat?
-    var randomSource: GKARC4RandomSource?
-    var randomDist: GKRandomDistribution?
     var image: SKTexture?
-    var isColliding: Bool?
-    
     
     // Initializers
     init(imageString: String, initialScale: CGFloat) {
@@ -23,30 +19,11 @@ class GameObject : SKSpriteNode, GameProtocol {
         let color = UIColor.clear
         super.init(texture: image!, color: color, size: image!.size())
         self.setNewScale(scale: initialScale)
-        self.isColliding = false
-        randomSource = GKARC4RandomSource()
         self.name = imageString
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    // class Functions (methods)
-    func Reset() {
-        
-    }
-    
-    func CheckBounds() {
-        
-    }
-    
-    func Start() {
-        
-    }
-    
-    func Update() {
-        
     }
     
     func setNewScale(scale:CGFloat) {
