@@ -14,7 +14,7 @@ var winningsLabel: SKLabelNode!
 var jackPotLabel: SKLabelNode!
 
 class GameScene: SKScene {
-  
+    
     var sk1: SK1?
     var sk2: SK2?
     var sk3: SK3?
@@ -95,7 +95,7 @@ class GameScene: SKScene {
         sk3?.size = CGSize(width: 100, height: 100)
         sk3?.position = CGPoint(x: 150, y: 25 )
         addChild(sk3!)
- 
+        
         // add buttons to scene
         
         bet1 = Bet1()
@@ -394,7 +394,7 @@ class GameScene: SKScene {
         betLabel?.text = String(playerBet)
     }
     // Set bet100 label
-   
+    
     func bet100_func() {
         play(soundName: "bet")
         playerBet = 100
@@ -422,39 +422,42 @@ class GameScene: SKScene {
     
     // SPIN button action
     func spin_func() {
-        play(soundName: "spin")
-        //playerBet = Int(lblBet.text!)!
-        playerBet = Int((betLabel?.text!)!)!
         
-        if playerMoney == 0
-        {
-            spin?.isHidden = true
-        }
+        playerBet = Int((betLabel?.text!)!)!
+        if playerBet > 0 {
+            play(soundName: "spin")
             
-        else if playerBet <= playerMoney {
-            spinResult = Reels();
             
-            let indexOf0 = fruitArray.firstIndex(of: spinResult[0])!
-            let indexOf1 = fruitArray.firstIndex(of: spinResult[1])!
-            let indexOf2 = fruitArray.firstIndex(of: spinResult[2])!
-            
-            let image1Name = fruitArray[indexOf0]
-            let image1 = UIImage(named: image1Name)
-            let texture1 = SKTexture(image: image1!)
-            sk1?.texture = texture1
-
-            let image2Name = fruitArray[indexOf1]
-            let image2 = UIImage(named: image2Name)
-            let texture2 = SKTexture(image: image2!)
-            sk2?.texture = texture2
-           
-            let image3Name = fruitArray[indexOf2]
-            let image3 = UIImage(named: image3Name)
-            let texture3 = SKTexture(image: image3!)
-            sk3?.texture = texture3
-
-            determineWinnings();
-            showPlayerStats();
+            if playerMoney == 0
+            {
+                spin?.isHidden = true
+            }
+                
+            else if playerBet <= playerMoney {
+                spinResult = Reels();
+                
+                let indexOf0 = fruitArray.firstIndex(of: spinResult[0])!
+                let indexOf1 = fruitArray.firstIndex(of: spinResult[1])!
+                let indexOf2 = fruitArray.firstIndex(of: spinResult[2])!
+                
+                let image1Name = fruitArray[indexOf0]
+                let image1 = UIImage(named: image1Name)
+                let texture1 = SKTexture(image: image1!)
+                sk1?.texture = texture1
+                
+                let image2Name = fruitArray[indexOf1]
+                let image2 = UIImage(named: image2Name)
+                let texture2 = SKTexture(image: image2!)
+                sk2?.texture = texture2
+                
+                let image3Name = fruitArray[indexOf2]
+                let image3 = UIImage(named: image3Name)
+                let texture3 = SKTexture(image: image3!)
+                sk3?.texture = texture3
+                
+                determineWinnings();
+                showPlayerStats();
+            }
         }
     }
     
@@ -478,11 +481,11 @@ class GameScene: SKScene {
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-       
+        
     }
     
     func touchUp(atPoint pos : CGPoint) {
-      
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -524,21 +527,6 @@ class GameScene: SKScene {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
-    
-//    override func update(_ currentTime: TimeInterval) {
-//        background?.Update()
-//        betLine?.Update()
-//        sk1?.Update()
-//        sk2?.Update()
-//        sk3?.Update()
-//        bet1?.Update()
-//        bet10?.Update()
-//        bet100?.Update()
-//        betMax?.Update()
-//        spin?.Update()
-//        reset?.Update()
-//        quit?.Update()
-//    }
 }
 
 //Play sound and then exit from app
