@@ -1,8 +1,7 @@
-
 import SpriteKit
 import GameplayKit
 
-class Banana : GameObject {
+class SK1 : GameObject {
     // Initializers
     init() {
         // initialize the object with an image

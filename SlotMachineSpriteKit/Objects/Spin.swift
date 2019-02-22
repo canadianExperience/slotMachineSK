@@ -1,11 +1,11 @@
 import SpriteKit
 import GameplayKit
 
-class SK3 : GameObject {
+class Spin : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "banana", initialScale: 1.0)
+        super.init(imageString: "spinButton", initialScale: 2.0)
         Start()
     }
     
@@ -20,7 +20,7 @@ class SK3 : GameObject {
     }
     
     override func Reset() {
-        self.zPosition = 2
+        self.zPosition = 4
         self.position.y = 3652
         
     }
@@ -37,3 +37,4 @@ class SK3 : GameObject {
     }
     
 }
+

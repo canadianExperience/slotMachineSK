@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C078779922203F88006AF844 /* jackPot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779022203F88006AF844 /* jackPot.mp3 */; };
+		C078779B22203F88006AF844 /* res.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779222203F88006AF844 /* res.mp3 */; };
+		C078779C22203F88006AF844 /* spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779322203F88006AF844 /* spin.mp3 */; };
+		C078779D22203F88006AF844 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779422203F88006AF844 /* win.mp3 */; };
+		C078779E22203F88006AF844 /* alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779522203F88006AF844 /* alert.mp3 */; };
+		C078779F22203F88006AF844 /* bet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779622203F88006AF844 /* bet.mp3 */; };
+		C07877A022203F88006AF844 /* quit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C078779722203F88006AF844 /* quit.mp3 */; };
+		C07877A122203F88006AF844 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = C078779822203F88006AF844 /* spin.wav */; };
+		C07877A322204D6E006AF844 /* SK1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877A222204D6E006AF844 /* SK1.swift */; };
+		C07877A522204FDE006AF844 /* SK2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877A422204FDE006AF844 /* SK2.swift */; };
+		C07877A722204FEA006AF844 /* SK3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877A622204FEA006AF844 /* SK3.swift */; };
+		C07877A922205206006AF844 /* Bet1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877A822205206006AF844 /* Bet1.swift */; };
+		C07877AB22205212006AF844 /* Bet10.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877AA22205212006AF844 /* Bet10.swift */; };
+		C07877AD2220521D006AF844 /* Bet100.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877AC2220521D006AF844 /* Bet100.swift */; };
+		C07877AF2220522C006AF844 /* BetMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877AE2220522C006AF844 /* BetMax.swift */; };
+		C07877B12220535A006AF844 /* Spin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877B02220535A006AF844 /* Spin.swift */; };
+		C07877B322205F76006AF844 /* Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877B222205F76006AF844 /* Reset.swift */; };
+		C07877B522205FBD006AF844 /* Quit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07877B422205FBD006AF844 /* Quit.swift */; };
 		C09A8FFD221F6C0200030649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A8FFC221F6C0200030649 /* AppDelegate.swift */; };
 		C09A8FFF221F6C0200030649 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C09A8FFE221F6C0200030649 /* GameScene.sks */; };
 		C09A9001221F6C0200030649 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C09A9000221F6C0200030649 /* Actions.sks */; };
@@ -15,36 +33,31 @@
 		C09A9008221F6C0200030649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09A9006221F6C0200030649 /* Main.storyboard */; };
 		C09A900A221F6C0300030649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09A9009221F6C0300030649 /* Assets.xcassets */; };
 		C09A900D221F6C0300030649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09A900B221F6C0300030649 /* LaunchScreen.storyboard */; };
-		C09A9018221F6DA800030649 /* bet1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9014221F6DA800030649 /* bet1Button.png */; };
-		C09A9019221F6DA800030649 /* bet10Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9015221F6DA800030649 /* bet10Button.png */; };
-		C09A901A221F6DA800030649 /* bet100Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9016221F6DA800030649 /* bet100Button.png */; };
-		C09A901B221F6DA800030649 /* betMaxButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9017221F6DA800030649 /* betMaxButton.png */; };
-		C09A901D221F6DED00030649 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A901C221F6DED00030649 /* background.png */; };
 		C09A9020221F6FE300030649 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A901F221F6FE300030649 /* GameObject.swift */; };
 		C09A9022221F6FF600030649 /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9021221F6FF600030649 /* GameProtocol.swift */; };
 		C09A9024221F713600030649 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9023221F713600030649 /* Background.swift */; };
 		C09A9026221F7DF000030649 /* BetLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9025221F7DF000030649 /* BetLine.swift */; };
-		C09A902A221F7F6200030649 /* bet_line.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9029221F7F6200030649 /* bet_line.png */; };
-		C09A902C221F892500030649 /* Banana.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A902B221F892500030649 /* Banana.swift */; };
-		C09A902E221F89B900030649 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A902D221F89B800030649 /* banana.png */; };
-		C09A9030221F89C800030649 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A902F221F89C800030649 /* cherry.png */; };
-		C09A9037221F89E200030649 /* grapes.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9031221F89E200030649 /* grapes.png */; };
-		C09A9038221F89E200030649 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9032221F89E200030649 /* orange.png */; };
-		C09A9039221F89E200030649 /* seven.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9033221F89E200030649 /* seven.png */; };
-		C09A903A221F89E200030649 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9034221F89E200030649 /* bar.png */; };
-		C09A903B221F89E200030649 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9035221F89E200030649 /* cherry.png */; };
-		C09A903C221F89E200030649 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A9036221F89E200030649 /* bell.png */; };
-		C09A903E221F8A4B00030649 /* blank.png in Resources */ = {isa = PBXBuildFile; fileRef = C09A903D221F8A4B00030649 /* blank.png */; };
-		C09A9040221F8C9000030649 /* Bell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A903F221F8C9000030649 /* Bell.swift */; };
-		C09A9042221F8CD900030649 /* Cherry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9041221F8CD900030649 /* Cherry.swift */; };
-		C09A9044221F8D0900030649 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9043221F8D0900030649 /* Bar.swift */; };
-		C09A9046221F8D2900030649 /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9045221F8D2900030649 /* Blank.swift */; };
-		C09A9048221F8D4F00030649 /* Grapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9047221F8D4F00030649 /* Grapes.swift */; };
-		C09A904A221F8D7C00030649 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A9049221F8D7C00030649 /* Orange.swift */; };
-		C09A904C221F8DA400030649 /* Seven.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A904B221F8DA400030649 /* Seven.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C078779022203F88006AF844 /* jackPot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jackPot.mp3; sourceTree = "<group>"; };
+		C078779222203F88006AF844 /* res.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = res.mp3; sourceTree = "<group>"; };
+		C078779322203F88006AF844 /* spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spin.mp3; sourceTree = "<group>"; };
+		C078779422203F88006AF844 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		C078779522203F88006AF844 /* alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert.mp3; sourceTree = "<group>"; };
+		C078779622203F88006AF844 /* bet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bet.mp3; sourceTree = "<group>"; };
+		C078779722203F88006AF844 /* quit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quit.mp3; sourceTree = "<group>"; };
+		C078779822203F88006AF844 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spin.wav; sourceTree = "<group>"; };
+		C07877A222204D6E006AF844 /* SK1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK1.swift; sourceTree = "<group>"; };
+		C07877A422204FDE006AF844 /* SK2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK2.swift; sourceTree = "<group>"; };
+		C07877A622204FEA006AF844 /* SK3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SK3.swift; sourceTree = "<group>"; };
+		C07877A822205206006AF844 /* Bet1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet1.swift; sourceTree = "<group>"; };
+		C07877AA22205212006AF844 /* Bet10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet10.swift; sourceTree = "<group>"; };
+		C07877AC2220521D006AF844 /* Bet100.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet100.swift; sourceTree = "<group>"; };
+		C07877AE2220522C006AF844 /* BetMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetMax.swift; sourceTree = "<group>"; };
+		C07877B02220535A006AF844 /* Spin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spin.swift; sourceTree = "<group>"; };
+		C07877B222205F76006AF844 /* Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reset.swift; sourceTree = "<group>"; };
+		C07877B422205FBD006AF844 /* Quit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quit.swift; sourceTree = "<group>"; };
 		C09A8FF9221F6C0200030649 /* SlotMachineSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachineSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09A8FFC221F6C0200030649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09A8FFE221F6C0200030649 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -55,33 +68,10 @@
 		C09A9009221F6C0300030649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C09A900C221F6C0300030649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C09A900E221F6C0300030649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C09A9014221F6DA800030649 /* bet1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet1Button.png; sourceTree = "<group>"; };
-		C09A9015221F6DA800030649 /* bet10Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet10Button.png; sourceTree = "<group>"; };
-		C09A9016221F6DA800030649 /* bet100Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet100Button.png; sourceTree = "<group>"; };
-		C09A9017221F6DA800030649 /* betMaxButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = betMaxButton.png; sourceTree = "<group>"; };
-		C09A901C221F6DED00030649 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C09A901F221F6FE300030649 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		C09A9021221F6FF600030649 /* GameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		C09A9023221F713600030649 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		C09A9025221F7DF000030649 /* BetLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetLine.swift; sourceTree = "<group>"; };
-		C09A9029221F7F6200030649 /* bet_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet_line.png; sourceTree = "<group>"; };
-		C09A902B221F892500030649 /* Banana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banana.swift; sourceTree = "<group>"; };
-		C09A902D221F89B800030649 /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
-		C09A902F221F89C800030649 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cherry.png; sourceTree = "<group>"; };
-		C09A9031221F89E200030649 /* grapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grapes.png; sourceTree = "<group>"; };
-		C09A9032221F89E200030649 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
-		C09A9033221F89E200030649 /* seven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seven.png; sourceTree = "<group>"; };
-		C09A9034221F89E200030649 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
-		C09A9035221F89E200030649 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cherry.png; path = "../iOS_assignment1/MAPD724_Elena_Melnikova_Slot_Machine/images 2/cherry.png"; sourceTree = "<group>"; };
-		C09A9036221F89E200030649 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
-		C09A903D221F8A4B00030649 /* blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank.png; sourceTree = "<group>"; };
-		C09A903F221F8C9000030649 /* Bell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bell.swift; sourceTree = "<group>"; };
-		C09A9041221F8CD900030649 /* Cherry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cherry.swift; sourceTree = "<group>"; };
-		C09A9043221F8D0900030649 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
-		C09A9045221F8D2900030649 /* Blank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
-		C09A9047221F8D4F00030649 /* Grapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grapes.swift; sourceTree = "<group>"; };
-		C09A9049221F8D7C00030649 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
-		C09A904B221F8DA400030649 /* Seven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seven.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,26 +85,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C078778F22203F88006AF844 /* slotMachineSounds */ = {
+			isa = PBXGroup;
+			children = (
+				C078779022203F88006AF844 /* jackPot.mp3 */,
+				C078779222203F88006AF844 /* res.mp3 */,
+				C078779322203F88006AF844 /* spin.mp3 */,
+				C078779422203F88006AF844 /* win.mp3 */,
+				C078779522203F88006AF844 /* alert.mp3 */,
+				C078779622203F88006AF844 /* bet.mp3 */,
+				C078779722203F88006AF844 /* quit.mp3 */,
+				C078779822203F88006AF844 /* spin.wav */,
+			);
+			path = slotMachineSounds;
+			sourceTree = "<group>";
+		};
 		C09A8FF0221F6C0200030649 = {
 			isa = PBXGroup;
 			children = (
 				C09A8FFB221F6C0200030649 /* SlotMachineSpriteKit */,
 				C09A8FFA221F6C0200030649 /* Products */,
-				C09A9014221F6DA800030649 /* bet1Button.png */,
-				C09A9015221F6DA800030649 /* bet10Button.png */,
-				C09A9016221F6DA800030649 /* bet100Button.png */,
-				C09A9017221F6DA800030649 /* betMaxButton.png */,
-				C09A901C221F6DED00030649 /* background.png */,
-				C09A9029221F7F6200030649 /* bet_line.png */,
-				C09A902D221F89B800030649 /* banana.png */,
-				C09A9034221F89E200030649 /* bar.png */,
-				C09A9036221F89E200030649 /* bell.png */,
-				C09A9035221F89E200030649 /* cherry.png */,
-				C09A903D221F8A4B00030649 /* blank.png */,
-				C09A9031221F89E200030649 /* grapes.png */,
-				C09A9032221F89E200030649 /* orange.png */,
-				C09A9033221F89E200030649 /* seven.png */,
-				C09A902F221F89C800030649 /* cherry.png */,
+				C078778F22203F88006AF844 /* slotMachineSounds */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,14 +141,16 @@
 				C09A9023221F713600030649 /* Background.swift */,
 				C09A9021221F6FF600030649 /* GameProtocol.swift */,
 				C09A901F221F6FE300030649 /* GameObject.swift */,
-				C09A902B221F892500030649 /* Banana.swift */,
-				C09A903F221F8C9000030649 /* Bell.swift */,
-				C09A9041221F8CD900030649 /* Cherry.swift */,
-				C09A9043221F8D0900030649 /* Bar.swift */,
-				C09A9045221F8D2900030649 /* Blank.swift */,
-				C09A9047221F8D4F00030649 /* Grapes.swift */,
-				C09A9049221F8D7C00030649 /* Orange.swift */,
-				C09A904B221F8DA400030649 /* Seven.swift */,
+				C07877A222204D6E006AF844 /* SK1.swift */,
+				C07877A422204FDE006AF844 /* SK2.swift */,
+				C07877A622204FEA006AF844 /* SK3.swift */,
+				C07877A822205206006AF844 /* Bet1.swift */,
+				C07877AA22205212006AF844 /* Bet10.swift */,
+				C07877AC2220521D006AF844 /* Bet100.swift */,
+				C07877AE2220522C006AF844 /* BetMax.swift */,
+				C07877B02220535A006AF844 /* Spin.swift */,
+				C07877B422205FBD006AF844 /* Quit.swift */,
+				C07877B222205F76006AF844 /* Reset.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -220,26 +213,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C078779F22203F88006AF844 /* bet.mp3 in Resources */,
+				C07877A022203F88006AF844 /* quit.mp3 in Resources */,
+				C07877A122203F88006AF844 /* spin.wav in Resources */,
 				C09A9008221F6C0200030649 /* Main.storyboard in Resources */,
-				C09A901D221F6DED00030649 /* background.png in Resources */,
-				C09A902E221F89B900030649 /* banana.png in Resources */,
-				C09A9018221F6DA800030649 /* bet1Button.png in Resources */,
-				C09A903E221F8A4B00030649 /* blank.png in Resources */,
 				C09A8FFF221F6C0200030649 /* GameScene.sks in Resources */,
-				C09A901A221F6DA800030649 /* bet100Button.png in Resources */,
-				C09A903A221F89E200030649 /* bar.png in Resources */,
-				C09A902A221F7F6200030649 /* bet_line.png in Resources */,
-				C09A9037221F89E200030649 /* grapes.png in Resources */,
-				C09A9038221F89E200030649 /* orange.png in Resources */,
-				C09A9019221F6DA800030649 /* bet10Button.png in Resources */,
-				C09A9030221F89C800030649 /* cherry.png in Resources */,
-				C09A903C221F89E200030649 /* bell.png in Resources */,
-				C09A903B221F89E200030649 /* cherry.png in Resources */,
+				C078779C22203F88006AF844 /* spin.mp3 in Resources */,
 				C09A900A221F6C0300030649 /* Assets.xcassets in Resources */,
 				C09A900D221F6C0300030649 /* LaunchScreen.storyboard in Resources */,
-				C09A9039221F89E200030649 /* seven.png in Resources */,
-				C09A901B221F6DA800030649 /* betMaxButton.png in Resources */,
+				C078779E22203F88006AF844 /* alert.mp3 in Resources */,
+				C078779D22203F88006AF844 /* win.mp3 in Resources */,
 				C09A9001221F6C0200030649 /* Actions.sks in Resources */,
+				C078779922203F88006AF844 /* jackPot.mp3 in Resources */,
+				C078779B22203F88006AF844 /* res.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,20 +236,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C09A902C221F892500030649 /* Banana.swift in Sources */,
-				C09A904A221F8D7C00030649 /* Orange.swift in Sources */,
 				C09A9020221F6FE300030649 /* GameObject.swift in Sources */,
-				C09A9044221F8D0900030649 /* Bar.swift in Sources */,
+				C07877A722204FEA006AF844 /* SK3.swift in Sources */,
 				C09A9022221F6FF600030649 /* GameProtocol.swift in Sources */,
-				C09A9040221F8C9000030649 /* Bell.swift in Sources */,
-				C09A9048221F8D4F00030649 /* Grapes.swift in Sources */,
-				C09A9042221F8CD900030649 /* Cherry.swift in Sources */,
-				C09A9046221F8D2900030649 /* Blank.swift in Sources */,
+				C07877A922205206006AF844 /* Bet1.swift in Sources */,
 				C09A9003221F6C0200030649 /* GameScene.swift in Sources */,
+				C07877A322204D6E006AF844 /* SK1.swift in Sources */,
 				C09A9026221F7DF000030649 /* BetLine.swift in Sources */,
 				C09A9005221F6C0200030649 /* GameViewController.swift in Sources */,
+				C07877B12220535A006AF844 /* Spin.swift in Sources */,
+				C07877A522204FDE006AF844 /* SK2.swift in Sources */,
 				C09A9024221F713600030649 /* Background.swift in Sources */,
-				C09A904C221F8DA400030649 /* Seven.swift in Sources */,
+				C07877AD2220521D006AF844 /* Bet100.swift in Sources */,
+				C07877AB22205212006AF844 /* Bet10.swift in Sources */,
+				C07877AF2220522C006AF844 /* BetMax.swift in Sources */,
+				C07877B322205F76006AF844 /* Reset.swift in Sources */,
+				C07877B522205FBD006AF844 /* Quit.swift in Sources */,
 				C09A8FFD221F6C0200030649 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -396,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
