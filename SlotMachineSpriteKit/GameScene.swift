@@ -73,7 +73,7 @@ class GameScene: SKScene {
         
         // betLine position
         
-        betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 252)
+        betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 256)
   
     }
     
