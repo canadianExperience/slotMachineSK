@@ -1,11 +1,11 @@
 import SpriteKit
 import GameplayKit
 
-class Background : GameObject {
+class BetLine : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "background", initialScale: 2.0)
+        super.init(imageString: "bet_line", initialScale: 2.0)
         Start()
     }
     
@@ -14,14 +14,15 @@ class Background : GameObject {
     }
     
     override func Start() {
-    
+        
         self.verticalSpeed = 0.0
-       // self.Reset()
+        // self.Reset()
     }
     
     override func Reset() {
-        self.zPosition = 1
+        self.zPosition = 2
         self.position.y = 3652
+     
     }
     
     override func CheckBounds() {

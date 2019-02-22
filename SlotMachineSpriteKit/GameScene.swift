@@ -7,12 +7,19 @@ let screenSize = UIScreen.main.bounds
 var screenWidth: CGFloat?
 var screenHeight: CGFloat?
 
+//labels
+var credits: SKLabelNode!
+var bet: SKLabelNode!
+var winnings: SKLabelNode!
+var jackPot: SKLabelNode!
+
 
 class GameScene: SKScene {
     
     
    
     var background: Background?
+    var betLine: BetLine?
     
    
     var degToRad = 0.01745329252
@@ -23,10 +30,50 @@ class GameScene: SKScene {
         screenWidth = frame.width
         screenHeight = frame.height
         
-        // add the ocean to scene
+        // add the betLine to scene
         background = Background()
         background?.zPosition = 1
         addChild(background!)
+        
+        betLine = BetLine()
+        betLine?.zPosition = 2
+        addChild(betLine!)
+        
+        credits = (childNode(withName: "credits") as! SKLabelNode)
+        credits?.position = CGPoint(x: -screenSize.size.width + 130, y: -screenSize.size.height / 2 + 55)
+        credits?.text = "cred"
+        credits?.zPosition = 2
+        credits?.fontName = "Futura-Bold"
+        credits?.fontColor = UIColor.white
+        credits?.fontSize = 40.00
+        
+        bet = (childNode(withName: "bet") as! SKLabelNode)
+        bet?.position = CGPoint(x: -screenSize.size.width + 320, y: -screenSize.size.height / 2 + 55)
+        bet?.text = "bet"
+        bet?.zPosition = 2
+        bet?.fontName = "Futura-Bold"
+        bet?.fontColor = UIColor.white
+        bet?.fontSize = 40.00
+        
+        winnings = (childNode(withName: "winnings") as! SKLabelNode)
+        winnings?.position = CGPoint(x: -screenSize.size.width + 510, y: -screenSize.size.height / 2 + 55)
+        winnings?.text = "win"
+        winnings?.zPosition = 2
+        winnings?.fontName = "Futura-Bold"
+        winnings?.fontColor = UIColor.white
+        winnings?.fontSize = 40.00
+        
+        jackPot = (childNode(withName: "jackPot") as! SKLabelNode)
+        jackPot?.position = CGPoint(x: 0, y: screenSize.size.height / 2 + 50)
+        jackPot?.text = "jackPot"
+        jackPot?.zPosition = 2
+        jackPot?.fontName = "Futura-Bold"
+        jackPot?.fontColor = UIColor.white
+        jackPot?.fontSize = 40.00
+        
+        // betLine position
+        
+        betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 252)
   
     }
     
@@ -63,6 +110,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         background?.Update()
+        betLine?.Update()
       
         
     }
