@@ -12,6 +12,11 @@ var credits: SKLabelNode!
 var bet: SKLabelNode!
 var winnings: SKLabelNode!
 var jackPot: SKLabelNode!
+var bet1: SKLabelNode!
+var bet10: SKLabelNode!
+var bet100: SKLabelNode!
+var betMax: SKLabelNode!
+var spin: SKLabelNode!
 
 
 class GameScene: SKScene {
@@ -74,6 +79,40 @@ class GameScene: SKScene {
         // betLine position
         
         betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 256)
+        
+        // bet buttons
+        
+        bet1 = (childNode(withName: "bet1") as! SKLabelNode)
+        bet1?.position = CGPoint(x: -screenSize.size.width + 50, y: -screenSize.size.height / 2 - 80)
+        bet1?.text = "BET1"
+        bet1?.zPosition = 2
+        bet1?.fontName = "Futura-Bold"
+        bet1?.fontColor = UIColor.red
+        bet1?.fontSize = 48.00
+        
+        bet10 = (childNode(withName: "bet10") as! SKLabelNode)
+        bet10?.position = CGPoint(x: -screenSize.size.width + 200, y: -screenSize.size.height / 2 - 80)
+        bet10?.text = "BET10"
+        bet10?.zPosition = 2
+        bet10?.fontName = "Futura-Bold"
+        bet10?.fontColor = UIColor.red
+        bet10?.fontSize = 48.00
+        
+        bet100 = (childNode(withName: "bet100") as! SKLabelNode)
+        bet100?.position = CGPoint(x: -screenSize.size.width + 380, y: -screenSize.size.height / 2 - 80)
+        bet100?.text = "BET100"
+        bet100?.zPosition = 2
+        bet100?.fontName = "Futura-Bold"
+        bet100?.fontColor = UIColor.red
+        bet100?.fontSize = 48.00
+        
+        spin = (childNode(withName: "spin") as! SKLabelNode)
+        spin?.position = CGPoint(x: -screenSize.size.width + 570, y: -screenSize.size.height / 2 - 80)
+        spin?.text = "SPIN"
+        spin?.zPosition = 2
+        spin?.fontName = "Futura-Bold"
+        spin?.fontColor = UIColor.green
+        spin?.fontSize = 48.00
   
     }
     
