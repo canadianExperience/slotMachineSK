@@ -58,13 +58,15 @@ class GameScene: SKScene {
         
         // add the background to scene
         background = Background()
+        background?.size = CGSize(width: 750, height: 1334)
         background?.zPosition = 1
+        
         addChild(background!)
         
         // add the betLine to scene
         betLine = BetLine()
         betLine?.zPosition = 3
-        betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 256)
+        betLine?.position = CGPoint(x: 0, y: screenSize.size.height / 2 - 250)
         addChild(betLine!)
         
         //add sk1, sk2, sk3 to scene (fruits)
@@ -75,7 +77,7 @@ class GameScene: SKScene {
         sk1?.texture = texture1
         sk1?.zPosition = 2
         sk1?.size = CGSize(width: 100, height: 100)
-        sk1?.position = CGPoint(x: -150, y: 25 )
+        sk1?.position = CGPoint(x: -150, y: 35 )
         addChild(sk1!)
         
         sk2 = SK2()
@@ -84,7 +86,7 @@ class GameScene: SKScene {
         sk2?.texture = texture2
         sk2?.zPosition = 2
         sk2?.size = CGSize(width: 100, height: 100)
-        sk2?.position = CGPoint(x: 0, y: 25 )
+        sk2?.position = CGPoint(x: 0, y: 35 )
         addChild(sk2!)
         
         sk3 = SK3()
@@ -93,7 +95,7 @@ class GameScene: SKScene {
         sk3?.texture = texture3
         sk3?.zPosition = 2
         sk3?.size = CGSize(width: 100, height: 100)
-        sk3?.position = CGPoint(x: 150, y: 25 )
+        sk3?.position = CGPoint(x: 150, y: 35 )
         addChild(sk3!)
         
         // add buttons to scene
@@ -103,7 +105,7 @@ class GameScene: SKScene {
         let bet1Texture = SKTexture(image: bet1Image!)
         bet1?.texture = bet1Texture
         bet1?.zPosition = 4
-        bet1?.position = CGPoint(x: -screenSize.size.width + 50, y: -screenSize.size.height / 2 - 70)
+        bet1?.position = CGPoint(x: -screenSize.size.width + 50, y: -screenSize.size.height / 2 - 200)
         addChild(bet1!)
         
         bet10 = Bet10()
@@ -111,7 +113,7 @@ class GameScene: SKScene {
         let bet10Texture = SKTexture(image: bet10Image!)
         bet10?.texture = bet10Texture
         bet10?.zPosition = 4
-        bet10?.position = CGPoint(x: -screenSize.size.width + 180, y: -screenSize.size.height / 2 - 70)
+        bet10?.position = CGPoint(x: -screenSize.size.width + 180, y: -screenSize.size.height / 2 - 200)
         addChild(bet10!)
         
         bet100 = Bet100()
@@ -119,7 +121,7 @@ class GameScene: SKScene {
         let bet100Texture = SKTexture(image: bet100Image!)
         bet100?.texture = bet100Texture
         bet100?.zPosition = 4
-        bet100?.position = CGPoint(x: -screenSize.size.width + 310, y: -screenSize.size.height / 2 - 70)
+        bet100?.position = CGPoint(x: -screenSize.size.width + 310, y: -screenSize.size.height / 2 - 200)
         addChild(bet100!)
         
         betMax = BetMax()
@@ -127,7 +129,7 @@ class GameScene: SKScene {
         let betMaxTexture = SKTexture(image: betMaxImage!)
         betMax?.texture = betMaxTexture
         betMax?.zPosition = 4
-        betMax?.position = CGPoint(x: -screenSize.size.width + 440, y: -screenSize.size.height / 2 - 70)
+        betMax?.position = CGPoint(x: -screenSize.size.width + 440, y: -screenSize.size.height / 2 - 200)
         addChild(betMax!)
         
         spin = Spin()
@@ -136,7 +138,7 @@ class GameScene: SKScene {
         spin?.texture = spinTexture
         spin?.zPosition = 4
         spin?.size = CGSize(width: 140, height: 120)
-        spin?.position = CGPoint(x: -screenSize.size.width + 577, y: -screenSize.size.height / 2 - 70)
+        spin?.position = CGPoint(x: -screenSize.size.width + 577, y: -screenSize.size.height / 2 - 200)
         addChild(spin!)
         
         reset = Reset()
@@ -144,8 +146,8 @@ class GameScene: SKScene {
         let resetTexture = SKTexture(image: resetImage!)
         reset?.texture = resetTexture
         reset?.zPosition = 4
-        reset?.size = CGSize(width: 120, height: 140)
-        reset?.position = CGPoint(x: screenSize.size.width - 577, y:screenSize.size.height / 2 + 85)
+        reset?.size = CGSize(width: 120, height: 160)
+        reset?.position = CGPoint(x: screenSize.size.width - 577, y:screenSize.size.height / 2 + 230)
         addChild(reset!)
         
         quit = Quit()
@@ -153,34 +155,34 @@ class GameScene: SKScene {
         let quitTexture = SKTexture(image: quitImage!)
         quit?.texture = quitTexture
         quit?.zPosition = 4
-        quit?.size = CGSize(width: 120, height: 140)
-        quit?.position = CGPoint(x: -screenSize.size.width + 577, y: screenSize.size.height / 2 + 85)
+        quit?.size = CGSize(width: 120, height: 160)
+        quit?.position = CGPoint(x: -screenSize.size.width + 570, y: screenSize.size.height / 2 + 230)
         addChild(quit!)
         
         //set labels
         creditsLabel = (childNode(withName: "credits") as! SKLabelNode)
-        creditsLabel?.position = CGPoint(x: -screenSize.size.width + 130, y: -screenSize.size.height / 2 + 50)
+        creditsLabel?.position = CGPoint(x: -screenSize.size.width + 130, y: -screenSize.size.height / 2 - 35)
         creditsLabel?.zPosition = 2
         creditsLabel?.fontName = "Futura-Bold"
         creditsLabel?.fontColor = UIColor.white
         creditsLabel?.fontSize = 40.00
         
         betLabel = (childNode(withName: "bet") as! SKLabelNode)
-        betLabel?.position = CGPoint(x: -screenSize.size.width + 320, y: -screenSize.size.height / 2 + 50)
+        betLabel?.position = CGPoint(x: -screenSize.size.width + 320, y: -screenSize.size.height / 2 - 35)
         betLabel?.zPosition = 3
         betLabel?.fontName = "Futura-Bold"
         betLabel?.fontColor = UIColor.white
         betLabel?.fontSize = 40.00
         
         winningsLabel = (childNode(withName: "winnings") as! SKLabelNode)
-        winningsLabel?.position = CGPoint(x: -screenSize.size.width + 510, y: -screenSize.size.height / 2 + 50)
+        winningsLabel?.position = CGPoint(x: -screenSize.size.width + 510, y: -screenSize.size.height / 2 - 35)
         winningsLabel?.zPosition = 2
         winningsLabel?.fontName = "Futura-Bold"
         winningsLabel?.fontColor = UIColor.white
         winningsLabel?.fontSize = 40.00
         
         jackPotLabel = (childNode(withName: "jackPot") as! SKLabelNode)
-        jackPotLabel?.position = CGPoint(x: 0, y: screenSize.size.height / 2 + 50)
+        jackPotLabel?.position = CGPoint(x: 0, y: screenSize.size.height / 2 + 185)
         jackPotLabel?.zPosition = 2
         jackPotLabel?.fontName = "Futura-Bold"
         jackPotLabel?.fontColor = UIColor.white
